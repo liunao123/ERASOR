@@ -1,7 +1,7 @@
 <launch>
-<rosparam command="load" file="$(find erasor)/config/your_own_env_vel16.yaml" />
+<rosparam command="load" file="$(find erasor)/config/your_own_env_vel16_test.yaml" />
 
-<node name="main_in_your_env_ros" pkg="erasor" type="main_in_your_env_ros" output="screen">
+<node name="main_in_your_env_ros" pkg="erasor" type="main_in_pose_graph" output="screen">
     <rosparam param="/large_scale/is_large_scale">true</rosparam>
     <rosparam param="/large_scale/submap_size">40.0</rosparam>
 </node>

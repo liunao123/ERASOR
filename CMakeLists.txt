@@ -95,6 +95,11 @@ add_executable(main_in_your_env_ros src/offline_map_updater/main_in_your_env.cpp
 target_link_libraries(main_in_your_env_ros ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
 add_dependencies(main_in_your_env_ros erasor_generate_messages_cpp)
 
+
+add_executable(main_in_pose_graph src/offline_map_updater/main_in_pose_graph.cpp ${erasor_src})
+target_link_libraries(main_in_pose_graph ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
+add_dependencies(main_in_pose_graph erasor_generate_messages_cpp)
+
 add_executable(compare_map src/compare_map.cpp src/offline_map_updater/src/erasor_utils.cpp)
 target_link_libraries(compare_map ${catkin_LIBRARIES})
 
